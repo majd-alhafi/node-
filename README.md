@@ -38,7 +38,14 @@ This repository is integrated with Jenkins for automated building of the Node.js
 
 To set up Jenkins for building the Node.js container, follow these steps:
 
-1. Configure a Jenkins job to build the Docker container:
+1. Start Jenkins Server:
+     ```bash
+     cd Jenkins
+     ```
+     ```bash
+     docker-compose up -d
+     ```
+2. Configure a Jenkins job to build the Docker container:
    - Create a new Jenkins freestyle project.
    - In the **Source Code Management** section, specify the Git repository URL.
    - In the **Build** section, add a build step to execute the following shell commands:
@@ -55,7 +62,7 @@ To set up Jenkins for building the Node.js container, follow these steps:
      ```
    - Save the Jenkins job configuration.
 
-2. Set up a webhook in the repository to trigger the Jenkins build:
+3. Set up a webhook in the repository to trigger the Jenkins build:
    - In the repository settings, navigate to **Webhooks**.
    - Add a new webhook with the Jenkins job's URL as the payload URL.
    - Configure the webhook to trigger on push events.
