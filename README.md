@@ -5,9 +5,10 @@ This repository contains a Node.js application Dockerized using Docker and integ
 ## Prerequisites
 
 - Docker installed on your local machine
-- Jenkins server set up and running
 
 ## Getting Started
+
+### Start the Node.js Application
 
 To get started with this repository, follow the steps below:
 
@@ -26,12 +27,12 @@ To get started with this repository, follow the steps below:
 3. Run the Docker container:
 
    ```bash
-   docker run -p 3000:3000 node-app
+   docker run -d -p 3000:3000 --name node node-app
    ```
 
    The Node.js application will be accessible at `http://localhost:3000`.
 
-## Jenkins Integration
+### Jenkins Integration
 
 This repository is integrated with Jenkins for automated building of the Node.js Docker container.
 
