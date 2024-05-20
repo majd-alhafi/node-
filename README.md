@@ -38,13 +38,27 @@ This repository is integrated with Jenkins for automated building of the Node.js
 
 To set up Jenkins for building the Node.js container, follow these steps:
 
-1. Start Jenkins Server:
-     ```bash
-     cd Jenkins
-     ```
-     ```bash
-     docker-compose up -d
-     ```
+1. To start the Jenkins server, please follow these steps:
+
+a. Open a terminal or command prompt.
+b. Navigate to the "Jenkins" folder within the cloned repository by using the following command:
+
+   ```bash
+   cd <cloned-repository-path>/Jenkins
+   ```
+
+   Replace "<cloned-repository-path>" with the actual path to the cloned repository on your local machine.
+
+c. Once you are inside the "Jenkins" folder, start the Jenkins server using Docker Compose with the following command:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   This command will start the Jenkins server in detached mode, allowing it to run in the background.
+
+Now your Jenkins server should be up and running. You can access the Jenkins web interface by opening a web browser and navigating to `http://localhost:8080`.
+
 2. Configure a Jenkins job to build the Docker container:
    - Create a new Jenkins freestyle project.
    - In the **Source Code Management** section, specify the Git repository URL.
